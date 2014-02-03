@@ -1,7 +1,6 @@
-package taojavo.labs.classes;
+package taojava.labs.classes;
 
 import java.io.PrintWriter;
-import java.math.BigInteger;
 
 /**
  * A simple experiment using fractions.
