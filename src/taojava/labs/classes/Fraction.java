@@ -59,11 +59,36 @@ public class Fraction
     this.num = BigInteger.valueOf (num);
     this.denom = BigInteger.valueOf (denom);
   } // Fraction(int, int)
+  
+  public Fraction (String fract)
+  {
+	  String[] fractionArray = fract.split("/");
+	  Integer numerator = new Integer(fractionArray[0]);
+	  Integer denominator = new Integer(fractionArray[1]);
+	  this.num = BigInteger.valueOf(numerator);
+	  this.denom = BigInteger.valueOf(denominator);
+  }
 
   // +---------+------------------------------------------------------
   // | Methods |
   // +---------+
 
+  public Fraction multiply(Fraction num1) throws Exception
+  {
+	  Fraction newFrac = new Fraction((num.multiply( num1.num)), (denom.multiply(num1.denom)));
+	  return newFrac;
+  }
+  
+  public Fraction fractional() throws Exception
+  {  
+	  Fraction newFrac = new Fraction(num.remainder(denom), denom);
+
+	  
+	  return newFrac;
+	  
+  }
+  
+  
   /**
    * Express this fraction as a double.
    */
